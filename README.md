@@ -42,29 +42,30 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming.
-Developed by:PAARKAVI A RegisterNumber:25012275
-*/
-module ex4(j,k,clk,q,qbar);
-input j,k,clk;
-output reg q,qbar;
-initial 
-begin
-q=1'b0;
-q=1'b1;
-end 
-
-always @(posedge clk)
-begin 
-q<=(j&~q)|(~k&q);
-qbar<=~q;
-end
+module JK(j,k,clk,q,qbar);    
+input j,k,clk;       
+output reg q,qbar;            
+initial           
+begin            
+q=1'b0;           
+q=1'b1;         
+end            
+  
+always @(posedge clk)          
+begin            
+q<=(j&~q)|(~k&q);            
+qbar<=~q;           
+end        
 endmodule
+
+Developed by:PAARKAVI A
+RegisterNumber:25012275
+
 **RTL LOGIC FOR FLIPFLOPS**
-<img width="1920" height="1080" alt="Screenshot (23)" src="https://github.com/user-attachments/assets/302bd590-e513-416b-8745-2a12d600f9ce" />
+<img width="1920" height="1080" alt="Screenshot (32)" src="https://github.com/user-attachments/assets/c42472ca-f2c8-4c9f-889c-2d84595848a8" />
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
-<img width="1920" height="1080" alt="Screenshot (24)" src="https://github.com/user-attachments/assets/9c8a1803-7045-406e-9daf-8f0142bb6559" />
+<img width="1920" height="1080" alt="Screenshot (43)" src="https://github.com/user-attachments/assets/8c01e0fd-5af0-40a9-9482-83f81a6a34af" />
 
 **RESULTS**
 Thus the JK FLIP FLOP logic gates are studied and the truth tables are verified.
